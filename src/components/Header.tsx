@@ -26,14 +26,18 @@ const Header = () => {
           ))}
         </ul>
         {!isNavOpen && (
-          <button type='button' className="lg:hidden" onClick={handleClick}>
+          <button type="button" className="lg:hidden" onClick={handleClick}>
             <img src={Hamburger} alt="hamburger menu" />
           </button>
         )}
         {isNavOpen && (
           <section className="absolute top-0 right-0 w-2/3 bg-background">
             <div className="container h-screen pt-7 backdrop-blur">
-              <button type="button" className="float-right lg:hidden" onClick={handleClick}>
+              <button
+                type="button"
+                className="float-right lg:hidden"
+                onClick={handleClick}
+              >
                 <img src={Close} alt="close hamburger" />
               </button>
               <ul className="space-y-6 pt-36">

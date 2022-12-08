@@ -56,7 +56,7 @@
   }
 
   li {
-    @apply hover:text-yellow cursor-pointer;
+    @apply cursor-pointer hover:text-yellow;
   }
 }
 
