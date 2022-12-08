@@ -17,11 +17,11 @@ const NEWLIST = [
 
 const New = () => {
   return (
-    <section className="space-y-1.5 bg-dark px-5 pt-8">
+    <section className="space-y-1.5 bg-dark px-[21px] py-6 lg:py-8 lg:px-6">
       <h2>New</h2>
       <ul>
         {NEWLIST.map((item) => (
-          <li key={item.title} className="heroNews space-y-1 py-7">
+          <li key={item.title} className="heroNews py-7">
             <h3>{item.title}</h3>
             <p>{item.description}</p>
           </li>

@@ -29,9 +29,9 @@ const Article = () => {
       {ARTICLES.map((article) => (
         <div key={article.id} className="flex gap-6">
           <img src={article.img} alt={article.title} />
-          <div className="flex flex-col gap-3">
+          <div className="space-y-3">
             <h2 className="text-silver">{article.id}</h2>
-            <div className="space-y-2">
+            <div className="space-y-[9px]">
               <h5>{article.title}</h5>
               <p>{article.desc}</p>
             </div>

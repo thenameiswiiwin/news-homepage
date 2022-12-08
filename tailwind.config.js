@@ -10,7 +10,10 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: '1rem', // 16px
+      padding: {
+        DEFAULT: '1rem', // 16px
+        lg: '10.3125rem', // 32px
+      },
     },
     colors: {
       background: '#f2f2f2',
@@ -37,6 +40,7 @@ module.exports = {
       padding: {
         13: '0.8125rem', // 13px
         31: '1.9375rem', // 31px
+        61: '3.8125rem', // 61px
       },
       letterSpacing: {
         btn: '4.375px',

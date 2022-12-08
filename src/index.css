@@ -32,7 +32,7 @@
   }
 
   h1 {
-    @apply text-2xl font-extrabold text-dark lg:text-xl;
+    @apply text-xl font-extrabold text-dark lg:text-2xl;
   }
 
   h2 {
