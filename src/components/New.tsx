@@ -17,12 +17,14 @@ const NEWLIST = [
 
 const New = () => {
   return (
-    <section className="space-y-1.5 bg-dark px-[21px] py-6 lg:py-8 lg:px-6">
+    <section className="flex flex-col gap-8 bg-dark py-8 px-6">
       <h2>New</h2>
-      <ul>
+      <ul className="flex flex-col gap-8">
         {NEWLIST.map((item) => (
-          <li key={item.title} className="heroNews py-7">
-            <h3>{item.title}</h3>
+          <li key={item.title} className="heroNews space-y-2">
+            <a href="/">
+              <h4>{item.title}</h4>
+            </a>
             <p>{item.description}</p>
           </li>
         ))}

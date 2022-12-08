@@ -4,16 +4,8 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
-    screens: {
-      sm: '375px',
-      lg: '1440px',
-    },
     container: {
-      center: true,
-      padding: {
-        DEFAULT: '1rem', // 16px
-        lg: '10.3125rem', // 32px
-      },
+      padding: '1rem', // 16px
     },
     colors: {
       background: '#f2f2f2',

@@ -1,7 +1,11 @@
-import { useState } from 'react';
 import Logo from '../assets/images/logo.png';
 import Hamburger from '../assets/images/hamburger.svg';
 import Close from '../assets/images/close.svg';
+
+interface NavProps {
+  isNavOpen: boolean;
+  handleClick: () => void;
+}
 
 const NAVLIST = [
   { name: 'Home' },
@@ -11,17 +15,15 @@ const NAVLIST = [
   { name: 'Categories' },
 ];
 
-const Nav = () => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-
-  const handleClick = () => setIsNavOpen(!isNavOpen);
-
+const Nav = ({ isNavOpen, handleClick }: NavProps) => {
   return (
     <nav className="flex items-center justify-between">
       <img src={Logo} alt="w" />
-      <ul className="gap-10 sm:hidden lg:flex">
+      <ul className="hidden gap-10 md:flex">
         {NAVLIST.map((item) => (
-          <li key={item.name}>{item.name}</li>
+          <a href="/" key={item.name}>
+            <li>{item.name}</li>
+          </a>
         ))}
       </ul>
       {!isNavOpen && (
@@ -30,21 +32,21 @@ const Nav = () => {
         </button>
       )}
       {isNavOpen && (
-        <section className="absolute top-0 right-0 h-screen w-2/3 bg-background backdrop-blur-md">
-          <div className="container h-screen pt-7 backdrop-blur">
-            <button
-              type="button"
-              className="float-right lg:hidden"
-              onClick={handleClick}
-            >
-              <img src={Close} alt="close hamburger" />
-            </button>
-            <ul className="space-y-6 pt-36">
-              {NAVLIST.map((item) => (
-                <li key={item.name}>{item.name}</li>
-              ))}
-            </ul>
-          </div>
+        <section className="absolute top-0 right-0 h-screen w-2/3 space-y-[86.3px] bg-background px-5 pt-[58px]">
+          <button
+            type="button"
+            className="float-right md:hidden"
+            onClick={handleClick}
+          >
+            <img src={Close} alt="close hamburger" />
+          </button>
+          <ul className="flex flex-col gap-6">
+            {NAVLIST.map((item) => (
+              <a href="/" key={item.name}>
+                <li>{item.name}</li>
+              </a>
+            ))}
+          </ul>
         </section>
       )}
     </nav>

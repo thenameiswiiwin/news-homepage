@@ -25,14 +25,16 @@ const ARTICLES = [
 
 const Article = () => {
   return (
-    <section className="space-y-8">
+    <section className="grid gap-8 lg:grid-cols-3">
       {ARTICLES.map((article) => (
         <div key={article.id} className="flex gap-6">
           <img src={article.img} alt={article.title} />
           <div className="space-y-3">
-            <h2 className="text-silver">{article.id}</h2>
+            <h3 className="text-silver">{article.id}</h3>
             <div className="space-y-[9px]">
-              <h5>{article.title}</h5>
+              <a href="/">
+                <h5>{article.title}</h5>
+              </a>
               <p>{article.desc}</p>
             </div>
           </div>
