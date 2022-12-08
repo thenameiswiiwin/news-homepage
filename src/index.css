@@ -55,7 +55,13 @@
     @apply cursor-pointer hover:text-yellow;
   }
 
-  button {
+  li {
+    @apply hover:text-yellow cursor-pointer;
+  }
+}
+
+@layer utilities {
+  .btn {
     @apply bg-vermillion py-13 px-31 text-xs font-bold uppercase tracking-btn text-white hover:bg-dark;
   }
 }

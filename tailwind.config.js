@@ -5,7 +5,12 @@ module.exports = {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     screens: {
+      sm: '375px',
       lg: '1440px',
+    },
+    container: {
+      center: true,
+      padding: '1rem', // 16px
     },
     colors: {
       background: '#f2f2f2',
@@ -35,6 +40,9 @@ module.exports = {
       },
       letterSpacing: {
         btn: '4.375px',
+      },
+      backdropBrightness: {
+        nav: '10',
       },
     },
   },
