@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-white: #fffdfa;
+    --color-blue: #00001a;
+    --color-gunmetal: #5e607a;
+    --color-vermillion: #f15d51;
+    --color-silver: #c5c6ce;
+    --color-yellow: #e9aa52;
+  }
+
+  body {
+    @apply
+  }
+
+  h1 {
+    @apply
+  }
+}
