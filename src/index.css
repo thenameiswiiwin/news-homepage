@@ -64,4 +64,8 @@
   .btn {
     @apply bg-vermillion py-13 px-31 text-xs font-bold uppercase tracking-btn text-white hover:bg-dark;
   }
+
+  .heroNews:not(:last-child) {
+    border-bottom: 1px solid #5d5f79;
+  }
 }
