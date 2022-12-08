@@ -2,21 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --color-white: #fffdfa;
-    --color-blue: #00001a;
-    --color-gunmetal: #5e607a;
-    --color-vermillion: #f15d51;
-    --color-silver: #c5c6ce;
-    --color-yellow: #e9aa52;
-  }
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-ExtraBold.ttf') format('ttf');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
   body {
-    @apply
+    @apply bg-background font-sans text-base text-gunmetal;
   }
 
   h1 {
-    @apply
+    @apply text-2xl font-extrabold text-dark lg:text-xl;
+  }
+
+  h2 {
+    @apply text-lg font-bold text-yellow lg:text-xl;
+  }
+
+  h3 {
+    @apply text-lg font-bold text-silver;
+  }
+
+  h4 {
+    @apply text-md font-extrabold text-white;
+  }
+
+  h5 {
+    @apply text-sm font-extrabold text-dark;
+  }
+
+  a {
+    @apply cursor-pointer hover:text-yellow;
+  }
+
+  button {
+    @apply bg-vermillion py-13 px-31 text-xs font-bold uppercase tracking-btn text-white hover:bg-dark;
   }
 }
