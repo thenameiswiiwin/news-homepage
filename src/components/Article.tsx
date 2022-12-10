@@ -1,32 +1,16 @@
-import Article1 from '../assets/images/article-1.png';
-import Article2 from '../assets/images/article-2.png';
-import Article3 from '../assets/images/article-3.png';
+import { ARTICLES } from '../data/data';
 
-const ARTICLES = [
-  {
-    id: '01',
-    img: Article1,
-    title: 'Reviving Retro PCs',
-    desc: 'What happens when old PCs are given modern upgrades?',
-  },
-  {
-    id: '02',
-    img: Article2,
-    title: 'Top 10 Laptops of 2022',
-    desc: 'Our best picks for various needs and budgets.',
-  },
-  {
-    id: '03',
-    img: Article3,
-    title: 'The Growth of Gaming',
-    desc: 'How the pandemic has sparked fresh opportunities.',
-  },
-];
+type ArticleData = {
+  id: string;
+  img: string;
+  title: string;
+  desc: string;
+};
 
 const Article = () => {
   return (
     <section className="grid gap-8 lg:grid-cols-3">
-      {ARTICLES.map((article) => (
+      {ARTICLES.map((article: ArticleData) => (
         <div key={article.id} className="flex gap-6">
           <img src={article.img} alt={article.title} />
           <div className="space-y-3">

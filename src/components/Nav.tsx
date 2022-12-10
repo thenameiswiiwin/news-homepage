@@ -1,19 +1,16 @@
 import Logo from '../assets/images/logo.png';
 import Hamburger from '../assets/images/hamburger.svg';
 import Close from '../assets/images/close.svg';
+import { NAVLIST } from '../data/data';
 
-interface NavProps {
+type NavProps = {
   isNavOpen: boolean;
-  handleClick: () => void;
-}
+  handleClick: React.MouseEventHandler<HTMLButtonElement>;
+};
 
-const NAVLIST = [
-  { name: 'Home' },
-  { name: 'New' },
-  { name: 'Popular' },
-  { name: 'Trending' },
-  { name: 'Categories' },
-];
+type NavListData = {
+  name: string;
+};
 
 const Nav = ({ isNavOpen, handleClick }: NavProps) => {
   return (
@@ -41,7 +38,7 @@ const Nav = ({ isNavOpen, handleClick }: NavProps) => {
             <img src={Close} alt="close hamburger" />
           </button>
           <ul className="flex flex-col gap-6">
-            {NAVLIST.map((item) => (
+            {NAVLIST.map((item: NavListData) => (
               <a href="/" key={item.name}>
                 <li>{item.name}</li>
               </a>
